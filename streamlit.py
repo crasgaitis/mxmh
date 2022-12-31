@@ -28,7 +28,7 @@ st.markdown(
         #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1),
         #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1),
         #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1),
-        #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(32) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div{{
+        {{
             display: none;
         }}
      }}
