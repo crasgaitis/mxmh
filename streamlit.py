@@ -7,19 +7,13 @@ import math
 from PIL import Image
 import pickle
 from utils import Remover
-# import tkinter as tk
+import tkinter as tk
 
 # custom responsive design
 
-# root = tk.Tk()
-# width = root.winfo_screenwidth()
-# height = root.winfo_screenheight()
-
-import sys
-from PyQt5.QtWidgets import QApplication
-
-app = QApplication(sys.argv)
-width = app.desktop().screenGeometry().width()
+root = tk.Tk()
+width = root.winfo_screenwidth()
+height = root.winfo_screenheight()
 
 def spacing():
     if width > 768:
