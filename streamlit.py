@@ -166,7 +166,7 @@ if submit:
     ocd_r = str(np.argmax(predictions[3], axis=1))
     
     st.write("## Predictions")
-    st.write("Mental health predictions are quantified on a scale of 0-5, where 0 signifies the no experience with a condition and 5 signifies regular or extreme experiences with a condition.")
+    st.write("Mental health predictions are quantified on a scale of 0-5, where 0 signifies no experience with a condition and 5 signifies regular or extreme experiences with a condition.")
     
     col8, col9, col10, col11 = st.columns(4)
 
