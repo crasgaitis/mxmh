@@ -7,19 +7,24 @@ import math
 from PIL import Image
 import pickle
 from utils import Remover
-import tkinter as tk
 
 # custom responsive design
 
-root = tk.Tk()
-width = root.winfo_screenwidth()
-height = root.winfo_screenheight()
-
-def spacing():
-    if width > 768:
-        st.write("#")
-    else:
-        st.write("")
+st.markdown(
+     f"""
+     <style>
+    
+     @media only screen and (max-width: 769px) {{
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1),
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1),
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1){{
+            display: none;
+        }}
+     }}
+     </style>
+     """,
+     unsafe_allow_html=True
+ )
 
 # loading
 
@@ -40,11 +45,11 @@ with col1:
     age = st.number_input("Age:", value = 20, min_value=1, max_value=90)
 
 with col2:
-    spacing()
+    st.write("#")
     musician = st.checkbox("I play an instrument.")
 
 with col3:
-    spacing()
+    st.write("#")
     composer = st.checkbox("I compose music.")
 
 streaming_service = st.selectbox('Primary streaming service:', ['Spotify', 'YouTube Music', 'Apple Music', 'Pandora', 'Other service', 'I do not use a streaming service'])
@@ -55,7 +60,7 @@ with col4:
     hours = st.number_input("Hours of listening time per day:", value=0, min_value=0, max_value=24)
     
 with col5:
-    spacing()
+    st.write("#")
     working = st.checkbox("I listen to music while working.")
 
 music_effects = st.selectbox('How do you think music improves your mental health?', ['Improve', 'Worsen', 'No effect'], index=2)
