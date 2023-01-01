@@ -14,7 +14,8 @@ from utils import Remover
 
 st.set_page_config(
     page_title="MxMH",
-    page_icon='https://i.imgur.com/VOJb5at.png'
+    page_icon='https://i.imgur.com/VOJb5at.png',
+    initial_sidebar_state="expanded",
 )
 
 
@@ -28,9 +29,16 @@ st.markdown(
         #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1),
         #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1),
         #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1),
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1),
+        #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div > div > h1
         {{
             display: none;
         }}
+        
+    #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(32){{
+        margin-right: -20px
+    }}
+        
      }}
      
     .stApp {{
@@ -42,6 +50,7 @@ st.markdown(
         background-color: rgba(255,255,255,0.6);
         border-radius: 25px;
         padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }}
      
      #root > div:nth-child(1) > div.withScreencast > div > div > div > section > div > div:nth-child(1) > div > div:nth-child(32) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div,
@@ -99,10 +108,12 @@ def condense_rankings(value):
 
 data[['Anxiety', 'Depression', 'Insomnia', 'OCD']] = data[['Anxiety', 'Depression', 'Insomnia', 'OCD']].applymap(condense_rankings)
 
-
 # demographics questions
 
-st.write('### Demographics')
+st.markdown(
+    """
+    <img src="https://i.imgur.com/KGCV9nC.png" alt="image" style = "border-top-left-radius: 20px; border-top-right-radius: 20px; border: 8px solid black; border-bottom: none; margin-top: -15px; max-width: calc(100%)"> <h3>Demographics</h3> """,
+    unsafe_allow_html=True )
 
 col1, col2, col3 = st.columns(3)
 
